@@ -4,19 +4,19 @@
 
 #include "CoreMinimal.h"
 #include "TPAttributeSet.h"
-#include "DamageAttributeSet.generated.h"
+#include "CollectiblesAttributeSet.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class MYGAME_API UDamageAttributeSet : public UTPAttributeSet
+class MYGAME_API UCollectiblesAttributeSet : public UTPAttributeSet
 {
 	GENERATED_BODY()
 
 public:
 	UPROPERTY(BlueprintReadOnly)
-	FGameplayAttributeData Damage;
-	ATTRIBUTE_ACCESSORS(UDamageAttributeSet, Damage)
+	FGameplayAttributeData Coins;
+	ATTRIBUTE_ACCESSORS(UCollectiblesAttributeSet, Coins)
 	
 };

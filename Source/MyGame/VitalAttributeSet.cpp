@@ -3,3 +3,10 @@
 
 #include "VitalAttributeSet.h"
 
+void UVitalAttributeSet::PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue)
+{
+
+	if (Attribute == GetHealthAttribute()) {
+		NewValue = FMath::Clamp(NewValue, 0.f, MaxHealth.GetCurrentValue());
+	}
+}

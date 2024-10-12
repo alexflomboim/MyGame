@@ -27,5 +27,7 @@ public:
 	FGameplayAttributeData Hunger;
 	ATTRIBUTE_ACCESSORS(UVitalAttributeSet, Hunger)
 
+	virtual void PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue);
+
 	
 };
