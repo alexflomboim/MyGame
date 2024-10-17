@@ -19,4 +19,11 @@ public:
 	FGameplayAttributeData Damage;
 	ATTRIBUTE_ACCESSORS(UDamageAttributeSet, Damage)
 	
+	UPROPERTY(BlueprintReadOnly)
+	FGameplayAttributeData DamagePowerJump;
+	ATTRIBUTE_ACCESSORS(UDamageAttributeSet, DamagePowerJump)
+
+	virtual void PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue);
+	virtual void PreAttributeBaseChange(const FGameplayAttribute& Attribute, float& NewValue) const;
+	
 };

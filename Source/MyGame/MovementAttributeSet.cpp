@@ -18,4 +18,9 @@ void UMovementAttributeSet::PostAttributeChange(const FGameplayAttribute& Attrib
 			MovementPtr->MaxWalkSpeed = NewValue;
 		}*/
 	}
+	else if (Attribute == GetJumpVelocityAttribute()) {
+		UCharacterMovementComponent* MovementPtr = Cast<AMyGameCharacter>(GetOwningAbilitySystemComponent()->GetAvatarActor())->GetCharacterMovement();
+		MovementPtr->JumpZVelocity = NewValue;
+	}
+	
 }

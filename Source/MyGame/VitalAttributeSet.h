@@ -27,7 +27,16 @@ public:
 	FGameplayAttributeData Hunger;
 	ATTRIBUTE_ACCESSORS(UVitalAttributeSet, Hunger)
 
+	UPROPERTY(BlueprintReadOnly)
+	FGameplayAttributeData Stamina;
+	ATTRIBUTE_ACCESSORS(UVitalAttributeSet, Stamina)
+
+	UPROPERTY(BlueprintReadOnly)
+	FGameplayAttributeData MaxStamina;
+	ATTRIBUTE_ACCESSORS(UVitalAttributeSet, MaxStamina)
+
 	virtual void PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue);
+	virtual void PreAttributeBaseChange(const FGameplayAttribute& Attribute, float& NewValue) const;
 
 	
 };

@@ -20,6 +20,12 @@ public:
 	FGameplayAttributeData Speed;
 	ATTRIBUTE_ACCESSORS(UMovementAttributeSet, Speed)
 
+	UPROPERTY(BlueprintReadOnly)
+	FGameplayAttributeData JumpVelocity;
+	ATTRIBUTE_ACCESSORS(UMovementAttributeSet, JumpVelocity)
+
+	
+
 	void PostAttributeChange(const FGameplayAttribute& Attribute, float OldValue, float NewValue);
 
 	
