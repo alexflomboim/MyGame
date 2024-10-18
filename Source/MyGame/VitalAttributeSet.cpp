@@ -10,8 +10,6 @@ void UVitalAttributeSet::PreAttributeChange(const FGameplayAttribute& Attribute,
 	if (Attribute == GetHealthAttribute()) {
 		NewValue = FMath::Clamp(NewValue, 0.f, MaxHealth.GetCurrentValue());
 	} else if (Attribute == GetStaminaAttribute()) {
-		float f = Stamina.GetCurrentValue();
-		Stamina.GetCurrentValue().
 		NewValue = FMath::Clamp(NewValue, 0.f, MaxStamina.GetCurrentValue());
 	}
 }

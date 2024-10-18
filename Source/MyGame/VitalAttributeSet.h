@@ -37,6 +37,5 @@ public:
 
 	virtual void PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue);
 	virtual void PreAttributeBaseChange(const FGameplayAttribute& Attribute, float& NewValue) const;
-
 	
 };
